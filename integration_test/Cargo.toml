@@ -5,6 +5,7 @@ authors = ["Steven Roose <steven@stevenroose.org>"]
 
 [dependencies]
 bitcoincore-rpc = { path = "../client" }
-bitcoin = { version = "0.26", features = [ "use-serde", "rand" ] }
-lazy_static = "1.4.0"
+#bitcoin = { version = "0.26", features = [ "use-serde", "rand" ] }
+bitcoin = { git = "https://github.com/stevenroose/rust-bitcoin", branch = "compact-blocks", features = [ "use-serde", "rand" ]}
+lazy_static = "1.4.0" 
 log = "0.4"

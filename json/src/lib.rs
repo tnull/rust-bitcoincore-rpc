@@ -1124,6 +1124,13 @@ pub struct GetNodeAddressesResult {
     pub port: u16,
 }
 
+#[derive(Clone, PartialEq, Eq, Debug, Deserialize, Serialize)]
+pub struct ListBannedResult {
+    pub address: String,
+    pub banned_until: u64,
+    pub ban_created: u64,
+}
+
 /// Models the result of "estimatesmartfee"
 #[derive(Clone, Debug, Deserialize, Serialize)]
 pub struct EstimateSmartFeeResult {

@@ -928,7 +928,7 @@ pub trait RpcApi: Sized {
     }
 
     /// List all banned IPs/Subnets.
-    fn list_banned(&self) -> Result<Vec<String>> {
+    fn list_banned(&self) -> Result<Vec<json::ListBannedResult>> {
         self.call("listbanned", &[])
     }
 
